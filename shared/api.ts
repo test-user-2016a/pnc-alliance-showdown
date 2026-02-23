@@ -1,12 +1,29 @@
-/**
- * Shared code between client and server
- * Useful to share types between client and server
- * and/or small pure JS functions that can be used on both client and server
- */
-
-/**
- * Example response type for /api/demo
- */
-export interface DemoResponse {
-  message: string;
+export interface Quest {
+  id: string;
+  quest: string;
+  requirement: string | number;
+  points: number;
+  time: string | null;
+  type: QuestType;
 }
+
+export type QuestType =
+  | "arena"
+  | "market"
+  | "alliance"
+  | "ap"
+  | "diamond"
+  | "stamina"
+  | "gather"
+  | "gear"
+  | "hero"
+  | "heal"
+  | "help"
+  | "building"
+  | "research"
+  | "troop"
+  | "rally"
+  | "speedup"
+  | "transport"
+  | "packs"
+  | "other";
