@@ -79,11 +79,11 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
 
           <div className="rounded-xl bg-secondary/30 border border-border/50 p-4">
             <div className="flex items-center gap-2 mb-2">
-              <Clock className="h-4 w-4 text-muted-foreground" />
-              <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">Time Limit</span>
+              <Clock className="h-4 w-4 text-primary" />
+              <span className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Time Limit</span>
             </div>
-            <p className="text-sm font-medium text-foreground/80">
-              {quest.time || "No time limit for this quest"}
+            <p className="text-lg font-bold text-foreground">
+              {quest.time || "No time limit"}
             </p>
           </div>
 

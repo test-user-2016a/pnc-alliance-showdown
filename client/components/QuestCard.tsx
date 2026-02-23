@@ -108,9 +108,9 @@ export function QuestCard({ quest, onClick }: QuestCardProps) {
             )}>
               {quest.points} Points
             </span>
-            <span className="mt-1 flex items-center gap-1 text-[10px] text-muted-foreground font-medium">
-              <Clock className="h-3 w-3" />
-              {quest.time || "— No time limit"}
+            <span className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground font-bold uppercase tracking-wider">
+              <Clock className="h-3.5 w-3.5" />
+              {quest.time || "No time limit"}
             </span>
           </div>
         </div>
