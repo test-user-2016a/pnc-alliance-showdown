@@ -13,6 +13,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "@/hooks/use-translation";
 import { typeIcons, typeColors } from "./QuestCard";
 
 interface QuestModalProps {
@@ -22,6 +23,7 @@ interface QuestModalProps {
 }
 
 export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
+  const { t } = useTranslation();
   if (!quest) return null;
 
   const Icon = typeIcons[quest.type] || HelpCircle;
@@ -35,7 +37,7 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
           "absolute top-0 left-0 w-full h-2 transition-all",
           isHighValue ? "bg-primary" : cn(questColors.bg.replace("bg-", "").replace("/10", ""), "bg-current opacity-30")
         )} style={{ backgroundColor: !isHighValue ? questColors.text.replace("text-", "") : undefined }} />
-        
+
         <DialogHeader className="px-6 pt-8 pb-4 text-left sm:text-left">
           <div className="flex items-center gap-4 mb-2">
             <div className={cn(
@@ -52,7 +54,7 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
                 "text-xs font-black uppercase tracking-widest",
                 isHighValue ? "text-primary" : questColors.text
               )}>
-                {quest.type} Quest
+                {t.types[quest.type] || quest.type} {t.filters.quest}
               </span>
             </div>
           </div>
@@ -61,18 +63,18 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
         <div className="px-6 py-4 space-y-6">
           <div className="grid grid-cols-2 gap-4">
             <div className="rounded-xl bg-secondary/30 border border-border/50 p-4">
-              <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider block mb-1">Requirement</span>
+              <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider block mb-1">{t.card.requirement}</span>
               <p className="text-lg font-bold text-foreground">
                 {typeof quest.requirement === 'number' ? quest.requirement.toLocaleString() : quest.requirement}
               </p>
             </div>
             <div className="rounded-xl bg-secondary/30 border border-border/50 p-4">
-              <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider block mb-1">Reward</span>
+              <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider block mb-1">{t.modal.reward}</span>
               <p className={cn(
                 "text-lg font-bold",
                 isHighValue ? "text-primary" : questColors.text
               )}>
-                {quest.points} Points
+                {quest.points} {t.card.points}
               </p>
             </div>
           </div>
@@ -80,10 +82,10 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
           <div className="rounded-xl bg-secondary/30 border border-border/50 p-4">
             <div className="flex items-center gap-2 mb-2">
               <Clock className="h-4 w-4 text-primary" />
-              <span className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Time Limit</span>
+              <span className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{t.modal.timeLimit}</span>
             </div>
             <p className="text-lg font-bold text-foreground">
-              {quest.time || "No time limit"}
+              {quest.time || t.card.noTime}
             </p>
           </div>
 
@@ -96,10 +98,10 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
               isHighValue ? "text-primary" : questColors.text
             )}>
               <Info className="h-4 w-4" />
-              <span className="text-[10px] font-bold uppercase tracking-widest">Helpful Tip</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest">{t.modal.tip}</span>
             </div>
             <p className="text-sm leading-relaxed text-foreground/90 italic font-medium">
-              {quest.note || "No specific tips available for this quest. Focus on completing the requirements efficiently to maximize point gain."}
+              {quest.note || t.modal.noTip}
             </p>
           </div>
         </div>
@@ -110,7 +112,7 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
               "px-4 py-2 text-sm font-bold rounded-lg transition-colors",
               isHighValue ? "bg-primary text-primary-foreground hover:bg-primary/90" : cn(questColors.bg.replace('/10', '/30'), questColors.text, "hover:bg-opacity-40")
             )}>
-              Got it
+              {t.modal.close}
             </button>
           </DialogClose>
         </div>

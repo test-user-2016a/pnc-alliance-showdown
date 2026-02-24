@@ -4,10 +4,13 @@ import { quests as initialQuests } from "@/data/quests";
 import { QuestCard } from "@/components/QuestCard";
 import { QuestFilters } from "@/components/QuestFilters";
 import { QuestModal } from "@/components/QuestModal";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useTranslation } from "@/hooks/use-translation";
 import { Quest, QuestType } from "@shared/api";
 import { Trophy, LayoutGrid, ListFilter, LayoutDashboard, Search } from "lucide-react";
 
 export default function Index() {
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState<string>("all");
   const [sortBy, setSortBy] = useState<string>("points");
@@ -65,13 +68,16 @@ export default function Index() {
               <Trophy className="h-6 w-6" />
             </div>
             <div className="flex flex-col">
-              <h1 className="text-lg font-bold leading-none tracking-tight">Alliance Showdown</h1>
-              <span className="text-xs text-muted-foreground font-medium uppercase tracking-widest">Puzzles & Chaos</span>
+              <h1 className="text-lg font-bold leading-none tracking-tight">{t.header.title}</h1>
+              <span className="text-xs text-muted-foreground font-medium uppercase tracking-widest">{t.header.subtitle}</span>
             </div>
           </div>
-          
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary ring-2 ring-white/10">
-            <span className="text-[10px] font-bold text-primary">JD</span>
+
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary ring-2 ring-white/10">
+              <span className="text-[10px] font-bold text-primary">JD</span>
+            </div>
           </div>
         </div>
       </header>
@@ -81,11 +87,11 @@ export default function Index() {
         <div className="mb-10 text-center lg:text-left">
           <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary ring-1 ring-inset ring-primary/20 mb-4">
             <ListFilter className="h-3 w-3" />
-            Quest Optimization Engine v1.0
+            {t.welcome.badge}
           </div>
-          <h2 className="text-4xl font-extrabold tracking-tight lg:text-5xl">Quest Data Dashboard</h2>
+          <h2 className="text-4xl font-extrabold tracking-tight lg:text-5xl">{t.welcome.title}</h2>
           <p className="mt-3 text-lg text-muted-foreground max-w-2xl">
-            Visualize, sort, and filter every alliance showdown quest with ease. Maximize your rewards and efficiency with real-time data analysis.
+            {t.welcome.subtitle}
           </p>
         </div>
 
@@ -104,11 +110,13 @@ export default function Index() {
           <div className="flex items-center gap-4 text-muted-foreground">
             <span className="flex items-center gap-1.5">
               <LayoutGrid className="h-4 w-4" />
-              Showing {filteredAndSortedQuests.length} Quests
+              {t.stats.showing.replace("{count}", filteredAndSortedQuests.length.toString())}
             </span>
           </div>
           <div className="flex items-center gap-2 font-semibold text-primary uppercase tracking-tighter text-xs">
-            Sorting by {sortBy} ({sortOrder})
+            {t.stats.sorting
+              .replace("{sortBy}", t.filters[sortBy as keyof typeof t.filters] || sortBy)
+              .replace("{order}", sortOrder === "asc" ? t.stats.asc : t.stats.desc)}
           </div>
         </div>
 
@@ -128,8 +136,8 @@ export default function Index() {
             <div className="h-20 w-20 rounded-full bg-secondary flex items-center justify-center mb-4">
               <Search className="h-10 w-10 text-muted-foreground/30" />
             </div>
-            <h3 className="text-xl font-bold">No quests found</h3>
-            <p className="text-muted-foreground mt-2">Try adjusting your filters or search query.</p>
+            <h3 className="text-xl font-bold">{t.empty.title}</h3>
+            <p className="text-muted-foreground mt-2">{t.empty.subtitle}</p>
           </div>
         )}
       </main>

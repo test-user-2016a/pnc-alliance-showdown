@@ -22,6 +22,7 @@ import {
   HelpCircle
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "@/hooks/use-translation";
 
 export const typeIcons: Record<string, any> = {
   arena: Trophy,
@@ -73,9 +74,10 @@ interface QuestCardProps {
 }
 
 export function QuestCard({ quest, onClick }: QuestCardProps) {
+  const { t } = useTranslation();
   const Icon = typeIcons[quest.type] || HelpCircle;
   const isHighValue = quest.points >= 240;
-  
+
   // Dynamic color based on quest type
   const questColors = typeColors[quest.type] || typeColors.other;
 
@@ -106,11 +108,11 @@ export function QuestCard({ quest, onClick }: QuestCardProps) {
               "text-xs font-black uppercase tracking-widest",
               isHighValue ? "text-primary" : questColors.text
             )}>
-              {quest.points} Points
+              {quest.points} {t.card.points}
             </span>
             <span className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground font-bold uppercase tracking-wider">
               <Clock className="h-3.5 w-3.5" />
-              {quest.time || "No time limit"}
+              {quest.time || t.card.noTime}
             </span>
           </div>
         </div>
@@ -120,7 +122,7 @@ export function QuestCard({ quest, onClick }: QuestCardProps) {
             {quest.quest}
           </h3>
           <div className="flex flex-col gap-0.5">
-            <span className="text-[10px] font-bold text-muted-foreground/60 uppercase tracking-widest">Requirement</span>
+            <span className="text-[10px] font-bold text-muted-foreground/60 uppercase tracking-widest">{t.card.requirement}</span>
             <p className="text-sm font-bold text-foreground/90">
               {typeof quest.requirement === 'number' ? quest.requirement.toLocaleString() : quest.requirement}
             </p>
@@ -132,7 +134,7 @@ export function QuestCard({ quest, onClick }: QuestCardProps) {
             "inline-flex items-center rounded-full px-2.5 py-0.5 text-[9px] font-bold ring-1 ring-inset ring-white/5 uppercase tracking-widest",
             isHighValue ? "bg-secondary text-primary" : cn(questColors.bg, questColors.text)
           )}>
-            {quest.type}
+            {t.types[quest.type] || quest.type}
           </span>
           <div className={cn(
             "h-1.5 w-1.5 rounded-full animate-pulse",
