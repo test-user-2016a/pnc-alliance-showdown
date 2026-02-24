@@ -119,7 +119,7 @@ export function QuestCard({ quest, onClick }: QuestCardProps) {
 
         <div>
           <h3 className="font-bold leading-tight text-foreground group-hover:text-primary transition-colors mb-1">
-            {quest.quest}
+            {t.questNames[quest.quest] || quest.quest}
           </h3>
           <div className="flex flex-col gap-0.5">
             <span className="text-[10px] font-bold text-muted-foreground/60 uppercase tracking-widest">{t.card.requirement}</span>

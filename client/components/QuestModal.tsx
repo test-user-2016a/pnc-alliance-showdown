@@ -48,7 +48,7 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
             </div>
             <div>
               <DialogTitle className="text-2xl font-bold tracking-tight text-foreground">
-                {quest.quest}
+                {t.questNames[quest.quest] || quest.quest}
               </DialogTitle>
               <span className={cn(
                 "text-xs font-black uppercase tracking-widest",

@@ -45,6 +45,7 @@ export interface Translations {
     subtitle: string;
   };
   types: Record<string, string>;
+  questNames: Record<string, string>;
 }
 
 export const translations: Record<Language, Translations> = {
@@ -56,17 +57,69 @@ export const translations: Record<Language, Translations> = {
     card: { requirement: "Requirement", points: "Points", time: "Time", noTime: "No time limit" },
     modal: { reward: "Reward", timeLimit: "Time Limit", tip: "Helpful Tip", close: "Got it", noTip: "No specific tips available for this quest." },
     empty: { title: "No quests found", subtitle: "Try adjusting your filters or search query." },
-    types: { arena: "Arena", market: "Black Market", alliance: "Alliance", ap: "Consume AP", diamond: "Diamond", stamina: "Stamina", gather: "Gathering", gear: "Gear", hero: "Hero Shards", heal: "Healing", help: "Help Allies", building: "Building Power", research: "Research Power", troop: "Troop Power", rally: "Monster Dens", speedup: "Speedups", transport: "Transport", packs: "Buy Packs", other: "Other" }
+    types: { arena: "Arena", market: "Black Market", alliance: "Alliance", ap: "Consume AP", diamond: "Diamond", stamina: "Stamina", gather: "Gathering", gear: "Gear", hero: "Hero Shards", heal: "Healing", help: "Help Allies", building: "Building Power", research: "Research Power", troop: "Troop Power", rally: "Monster Dens", speedup: "Speedups", transport: "Transport", packs: "Buy Packs", other: "Other" },
+    questNames: {
+      "Arena Challenge": "Arena Challenge",
+      "Black Market": "Black Market",
+      "Consume Alliance Coins": "Consume Alliance Coins",
+      "Consume AP": "Consume AP",
+      "Consume Diamond": "Consume Diamond",
+      "Consume Stamina": "Consume Stamina",
+      "Gather Food": "Gather Food",
+      "Gather Iron": "Gather Iron",
+      "Gather Stone": "Gather Stone",
+      "Gather Wood": "Gather Wood",
+      "Get Gear Materials": "Get Gear Materials",
+      "Get Hero Shard": "Get Hero Shard",
+      "Heal Units": "Heal Units",
+      "Help Allies": "Help Allies",
+      "Improve Building Power": "Improve Building Power",
+      "Improve Research Power": "Improve Research Power",
+      "Improve Troop Power": "Improve Troop Power",
+      "Rally on Monster Dens": "Rally on Monster Dens",
+      "Research": "Research",
+      "Speedups (Build/Tech/Training/Healing)": "Speedups (Build/Tech/Training/Healing)",
+      "Speedup (Build/Tech/Training/Healing)": "Speedup (Build/Tech/Training/Healing)",
+      "Transport Resources to Allies": "Transport Resources to Allies",
+      "Buy Packs": "Buy Packs",
+      "Gain Diamonds via Packs": "Gain Diamonds via Packs"
+    }
   },
   it: {
     header: { title: "Sfida tra Alleanze", subtitle: "Puzzles & Chaos", dashboard: "Dashboard" },
-    welcome: { badge: "Motore di Ottimizzazione Missioni v1.0", title: "Dashboard Dati Missioni", subtitle: "Visualizza, ordina e filtra ogni missione della sfida tra alleanze con facilità. Massimizza le tue ricompense." },
+    welcome: { badge: "Motore di Ottimizzazione Missioni v1.0", title: "Dashboard Dati Missioni", subtitle: "Visualizza, ordina e filtra ogni missione della sfida tra alleanze con facilità." },
     filters: { search: "Cerca missioni...", all: "Tutti i Tipi", personal: "Personali (240)", sort: "Ordina per", quest: "Nome Missione", type: "Tipo Missione", points: "Punti", time: "Tempo" },
     stats: { showing: "Mostrando {count} Missioni", sorting: "Ordinamento per {sortBy} ({order})", asc: "cresc", desc: "decresc" },
     card: { requirement: "Requisito", points: "Punti", time: "Tempo", noTime: "Nessun limite" },
     modal: { reward: "Ricompensa", timeLimit: "Limite di Tempo", tip: "Consiglio Utile", close: "Capito", noTip: "Nessun consiglio specifico disponibile." },
     empty: { title: "Nessuna missione trovata", subtitle: "Prova a modificare i filtri o la ricerca." },
-    types: { arena: "Arena", market: "Mercato Nero", alliance: "Alleanza", ap: "Consuma PA", diamond: "Diamante", stamina: "Energia", gather: "Raccolta", gear: "Equipaggiamento", hero: "Frammenti Eroe", heal: "Cura", help: "Aiuto Alleati", building: "Potere Edifici", research: "Potere Ricerca", troop: "Potere Truppe", rally: "Covi di Mostri", speedup: "Accelerazioni", transport: "Trasporto", packs: "Pacchetti", other: "Altro" }
+    types: { arena: "Arena", market: "Mercato Nero", alliance: "Alleanza", ap: "Consuma PA", diamond: "Diamante", stamina: "Energia", gather: "Raccolta", gear: "Equipaggiamento", hero: "Frammenti Eroe", heal: "Cura", help: "Aiuto Alleati", building: "Potere Edifici", research: "Potere Ricerca", troop: "Potere Truppe", rally: "Covi di Mostri", speedup: "Accelerazioni", transport: "Trasporto", packs: "Pacchetti", other: "Altro" },
+    questNames: {
+      "Arena Challenge": "Sfida in Arena",
+      "Black Market": "Mercato Nero",
+      "Consume Alliance Coins": "Consuma Monete Alleanza",
+      "Consume AP": "Consuma PA",
+      "Consume Diamond": "Consuma Diamanti",
+      "Consume Stamina": "Consuma Energia",
+      "Gather Food": "Raccogli Cibo",
+      "Gather Iron": "Raccogli Ferro",
+      "Gather Stone": "Raccogli Pietra",
+      "Gather Wood": "Raccogli Legno",
+      "Get Gear Materials": "Ottieni Materiali Equip.",
+      "Get Hero Shard": "Ottieni Frammenti Eroe",
+      "Heal Units": "Cura Unità",
+      "Help Allies": "Aiuta Alleati",
+      "Improve Building Power": "Migliora Potere Edifici",
+      "Improve Research Power": "Migliora Potere Ricerca",
+      "Improve Troop Power": "Migliora Potere Truppe",
+      "Rally on Monster Dens": "Rally su Covi di Mostri",
+      "Research": "Ricerca",
+      "Speedups (Build/Tech/Training/Healing)": "Accelerazioni (Costr./Tecn./Addest./Cura)",
+      "Speedup (Build/Tech/Training/Healing)": "Accelerazione (Costr./Tecn./Addest./Cura)",
+      "Transport Resources to Allies": "Trasporta Risorse agli Alleati",
+      "Buy Packs": "Acquista Pacchetti",
+      "Gain Diamonds via Packs": "Ottieni Diamanti dai Pacchetti"
+    }
   },
   pt: {
     header: { title: "Confronto de Alianças", subtitle: "Puzzles & Chaos", dashboard: "Painel" },
@@ -76,7 +129,33 @@ export const translations: Record<Language, Translations> = {
     card: { requirement: "Requisito", points: "Pontos", time: "Tempo", noTime: "Sem limite" },
     modal: { reward: "Recompensa", timeLimit: "Limite de Tempo", tip: "Dica Útil", close: "Entendido", noTip: "Nenhuma dica específica disponível." },
     empty: { title: "Nenhuma missão encontrada", subtitle: "Tente ajustar seus filtros ou pesquisa." },
-    types: { arena: "Arena", market: "Mercado Negro", alliance: "Aliança", ap: "Consumir PA", diamond: "Diamante", stamina: "Estamina", gather: "Coleta", gear: "Equipamento", hero: "Fragmentos de Herói", heal: "Cura", help: "Ajuda de Aliados", building: "Poder de Construção", research: "Poder de Pesquisa", troop: "Poder de Tropas", rally: "Covis de Monstros", speedup: "Acelerações", transport: "Transporte", packs: "Pacotes", other: "Outro" }
+    types: { arena: "Arena", market: "Mercado Negro", alliance: "Aliança", ap: "Consumir PA", diamond: "Diamante", stamina: "Estamina", gather: "Coleta", gear: "Equipamento", hero: "Fragmentos de Herói", heal: "Cura", help: "Ajuda de Aliados", building: "Poder de Construção", research: "Poder de Pesquisa", troop: "Poder de Tropas", rally: "Covis de Monstros", speedup: "Acelerações", transport: "Transporte", packs: "Pacotes", other: "Outro" },
+    questNames: {
+      "Arena Challenge": "Desafio de Arena",
+      "Black Market": "Mercado Negro",
+      "Consume Alliance Coins": "Consumir Moedas de Aliança",
+      "Consume AP": "Consumir PA",
+      "Consume Diamond": "Consumir Diamantes",
+      "Consume Stamina": "Consumir Estamina",
+      "Gather Food": "Coletar Comida",
+      "Gather Iron": "Coletar Ferro",
+      "Gather Stone": "Coletar Pedra",
+      "Gather Wood": "Coletar Madeira",
+      "Get Gear Materials": "Obter Materiais de Equip.",
+      "Get Hero Shard": "Obter Fragmentos de Herói",
+      "Heal Units": "Curar Unidades",
+      "Help Allies": "Ajudar Aliados",
+      "Improve Building Power": "Melhorar Poder de Const.",
+      "Improve Research Power": "Melhorar Poder de Pesq.",
+      "Improve Troop Power": "Melhorar Poder de Tropas",
+      "Rally on Monster Dens": "Rally em Covis de Monstros",
+      "Research": "Pesquisa",
+      "Speedups (Build/Tech/Training/Healing)": "Acelerações (Const./Tec./Treino/Cura)",
+      "Speedup (Build/Tech/Training/Healing)": "Aceleração (Const./Tec./Treino/Cura)",
+      "Transport Resources to Allies": "Transportar Recursos para Aliados",
+      "Buy Packs": "Comprar Pacotes",
+      "Gain Diamonds via Packs": "Ganhar Diamantes via Pacotes"
+    }
   },
   de: {
     header: { title: "Allianz-Showdown", subtitle: "Puzzles & Chaos", dashboard: "Dashboard" },
@@ -86,7 +165,33 @@ export const translations: Record<Language, Translations> = {
     card: { requirement: "Anforderung", points: "Punkte", time: "Zeit", noTime: "Kein Zeitlimit" },
     modal: { reward: "Belohnung", timeLimit: "Zeitlimit", tip: "Hilfreicher Tipp", close: "Verstanden", noTip: "Keine spezifischen Tipps verfügbar." },
     empty: { title: "Keine Quests gefunden", subtitle: "Versuchen Sie, Ihre Filter oder Suche anzupassen." },
-    types: { arena: "Arena", market: "Schwarzmarkt", alliance: "Allianz", ap: "AP verbrauchen", diamond: "Diamant", stamina: "Ausdauer", gather: "Sammeln", gear: "Ausrüstung", hero: "Heldenscherben", heal: "Heilung", help: "Allianz-Hilfe", building: "Gebäudekraft", research: "Forschungskraft", troop: "Truppenkraft", rally: "Monsterhöhlen", speedup: "Beschleuniger", transport: "Transport", packs: "Pakete", other: "Andere" }
+    types: { arena: "Arena", market: "Schwarzmarkt", alliance: "Allianz", ap: "AP verbrauchen", diamond: "Diamant", stamina: "Ausdauer", gather: "Sammeln", gear: "Ausrüstung", hero: "Heldenscherben", heal: "Heilung", help: "Allianz-Hilfe", building: "Gebäudekraft", research: "Forschungskraft", troop: "Truppenkraft", rally: "Monsterhöhlen", speedup: "Beschleuniger", transport: "Transport", packs: "Pakete", other: "Andere" },
+    questNames: {
+      "Arena Challenge": "Arena-Herausforderung",
+      "Black Market": "Schwarzmarkt",
+      "Consume Alliance Coins": "Allianz-Münzen verbrauchen",
+      "Consume AP": "AP verbrauchen",
+      "Consume Diamond": "Diamanten verbrauchen",
+      "Consume Stamina": "Ausdauer verbrauchen",
+      "Gather Food": "Nahrung sammeln",
+      "Gather Iron": "Eisen sammeln",
+      "Gather Stone": "Stein sammeln",
+      "Gather Wood": "Holz sammeln",
+      "Get Gear Materials": "Ausrüstungsmaterial erhalten",
+      "Get Hero Shard": "Heldenscherben erhalten",
+      "Heal Units": "Einheiten heilen",
+      "Help Allies": "Allianz-Hilfe leisten",
+      "Improve Building Power": "Gebäudekraft verbessern",
+      "Improve Research Power": "Forschungskraft verbessern",
+      "Improve Troop Power": "Truppenkraft verbessern",
+      "Rally on Monster Dens": "Rally auf Monsterhöhlen",
+      "Research": "Forschung",
+      "Speedups (Build/Tech/Training/Healing)": "Beschleuniger (Bau/Tech/Train./Heil.)",
+      "Speedup (Build/Tech/Training/Healing)": "Beschleuniger (Bau/Tech/Train./Heil.)",
+      "Transport Resources to Allies": "Ressourcentransport an Verbündete",
+      "Buy Packs": "Pakete kaufen",
+      "Gain Diamonds via Packs": "Diamanten über Pakete erhalten"
+    }
   },
   ru: {
     header: { title: "Противостояние Альянсов", subtitle: "Puzzles & Chaos", dashboard: "Панель" },
@@ -96,7 +201,33 @@ export const translations: Record<Language, Translations> = {
     card: { requirement: "Требование", points: "Очки", time: "Время", noTime: "Без лимита" },
     modal: { reward: "Награда", timeLimit: "Лимит времени", tip: "Полезный совет", close: "Понятно", noTip: "Специфических советов нет." },
     empty: { title: "Квесты не найдены", subtitle: "Попробуйте изменить фильтры." },
-    types: { arena: "Арена", market: "Рынок", alliance: "Альянс", ap: "Очки действия", diamond: "Алмазы", stamina: "Энергия", gather: "Сбор", gear: "Снаряжение", hero: "Герои", heal: "Лечение", help: "Помощь", building: "Стройка", research: "Наука", troop: "Войска", rally: "Логова", speedup: "Ускорители", transport: "Транспорт", packs: "Наборы", other: "Другое" }
+    types: { arena: "Арена", market: "Рынок", alliance: "Альянс", ap: "Очки действия", diamond: "Алмазы", stamina: "Энергия", gather: "Сбор", gear: "Снаряжение", hero: "Герои", heal: "Лечение", help: "Помощь", building: "Стройка", research: "Наука", troop: "Войска", rally: "Логова", speedup: "Ускорители", transport: "Транспорт", packs: "Наборы", other: "Другое" },
+    questNames: {
+      "Arena Challenge": "Вызов на арене",
+      "Black Market": "Черный рынок",
+      "Consume Alliance Coins": "Трата монет альянса",
+      "Consume AP": "Трата ОД",
+      "Consume Diamond": "Трата алмазов",
+      "Consume Stamina": "Трата энергии",
+      "Gather Food": "Сбор еды",
+      "Gather Iron": "Сбор железа",
+      "Gather Stone": "Сбор камня",
+      "Gather Wood": "Сбор дерева",
+      "Get Gear Materials": "Получение материалов снаряжения",
+      "Get Hero Shard": "Получение фрагментов героев",
+      "Heal Units": "Лечение юнитов",
+      "Help Allies": "Помощь союзникам",
+      "Improve Building Power": "Повышение мощи зданий",
+      "Improve Research Power": "Повышение мощи науки",
+      "Improve Troop Power": "Повышение мощи войск",
+      "Rally on Monster Dens": "Атака на логова монстров",
+      "Research": "Исследование",
+      "Speedups (Build/Tech/Training/Healing)": "Ускорения (Стройка/Наука/Войска/Лечение)",
+      "Speedup (Build/Tech/Training/Healing)": "Ускорение (Стройка/Наука/Войска/Лечение)",
+      "Transport Resources to Allies": "Транспорт ресурсов союзникам",
+      "Buy Packs": "Покупка наборов",
+      "Gain Diamonds via Packs": "Получение алмазов из наборов"
+    }
   },
   uk: {
     header: { title: "Протистояння Альянсів", subtitle: "Puzzles & Chaos", dashboard: "Панель" },
@@ -106,6 +237,32 @@ export const translations: Record<Language, Translations> = {
     card: { requirement: "Вимога", points: "Очки", time: "Час", noTime: "Без ліміту" },
     modal: { reward: "Нагорода", timeLimit: "Ліміт часу", tip: "Корисна порада", close: "Зрозуміло", noTip: "Специфічних порад немає." },
     empty: { title: "Квести не знайдено", subtitle: "Спробуйте змінити фільтри." },
-    types: { arena: "Арена", market: "Ринок", alliance: "Альянс", ap: "Очки дії", diamond: "Алмази", stamina: "Енергія", gather: "Збір", gear: "Спорядження", hero: "Герої", heal: "Лікування", help: "Допомога", building: "Будівництво", research: "Наука", troop: "Війська", rally: "Лігва", speedup: "Прискорювачі", transport: "Транспорт", packs: "Набори", other: "Інше" }
+    types: { arena: "Арена", market: "Ринок", alliance: "Альянс", ap: "Очки дії", diamond: "Алмази", stamina: "Енергія", gather: "Збір", gear: "Спорядження", hero: "Герої", heal: "Лікування", help: "Допомога", building: "Будівництво", research: "Наука", troop: "Війська", rally: "Лігва", speedup: "Прискорювачі", transport: "Транспорт", packs: "Набори", other: "Інше" },
+    questNames: {
+      "Arena Challenge": "Виклик на арені",
+      "Black Market": "Чорний ринок",
+      "Consume Alliance Coins": "Трата монет альянсу",
+      "Consume AP": "Трата ОД",
+      "Consume Diamond": "Трата алмазів",
+      "Consume Stamina": "Трата енергії",
+      "Gather Food": "Збір їжі",
+      "Gather Iron": "Збір заліза",
+      "Gather Stone": "Збір каменю",
+      "Gather Wood": "Збір дерева",
+      "Get Gear Materials": "Отримання матеріалів спорядження",
+      "Get Hero Shard": "Отримання фрагментів героїв",
+      "Heal Units": "Лікування юнітів",
+      "Help Allies": "Допомога союзникам",
+      "Improve Building Power": "Підвищення моці будівель",
+      "Improve Research Power": "Підвищення моці науки",
+      "Improve Troop Power": "Підвищення моці військ",
+      "Rally on Monster Dens": "Атака на лігва монстрів",
+      "Research": "Дослідження",
+      "Speedups (Build/Tech/Training/Healing)": "Прискорення (Будівництво/Наука/Війська/Лікування)",
+      "Speedup (Build/Tech/Training/Healing)": "Прискорення (Будівництво/Наука/Війська/Лікування)",
+      "Transport Resources to Allies": "Транспорт ресурсів союзникам",
+      "Buy Packs": "Купівля наборів",
+      "Gain Diamonds via Packs": "Отримання алмазів з наборів"
+    }
   }
 };
