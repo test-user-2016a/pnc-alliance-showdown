@@ -100,8 +100,8 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
               <Info className="h-4 w-4" />
               <span className="text-[10px] font-bold uppercase tracking-widest">{t.modal.tip}</span>
             </div>
-            <p className="text-sm leading-relaxed text-foreground/90 italic font-medium">
-              {quest.note || t.modal.noTip}
+            <p className="text-sm leading-relaxed text-foreground/90 italic font-medium whitespace-pre-line">
+              {quest.type === "gather" ? t.tips.gatherQuest : (quest.note || t.modal.noTip)}
             </p>
           </div>
         </div>

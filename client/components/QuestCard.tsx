@@ -119,15 +119,11 @@ export function QuestCard({ quest, onClick }: QuestCardProps) {
                   ? "bg-emerald-500/20 text-emerald-400 ring-emerald-500/30 border border-emerald-500/40"
                   : "bg-rose-500/20 text-rose-400 ring-rose-500/30 border border-rose-500/40"
               )}>
-                {quest.recommendation === "recommended" ? (
-                  <>
-                    <span>✨ Recommended</span>
-                  </>
-                ) : (
-                  <>
-                    <span>⚠️ Not Recommended</span>
-                  </>
-                )}
+                <span>
+                  {quest.recommendation === "recommended"
+                    ? t.recommendation.recommended
+                    : t.recommendation.not_recommended}
+                </span>
               </div>
             )}
             <span className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground font-bold uppercase tracking-wider">

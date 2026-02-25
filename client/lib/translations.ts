@@ -49,6 +49,9 @@ export interface Translations {
     not_recommended: string;
     neutral: string;
   };
+  tips: {
+    gatherQuest: string;
+  };
   types: Record<string, string>;
   questNames: Record<string, string>;
 }
@@ -62,7 +65,8 @@ export const translations: Record<Language, Translations> = {
     card: { requirement: "Requirement", points: "Points", time: "Time", noTime: "No time limit" },
     modal: { reward: "Reward", timeLimit: "Time Limit", tip: "Helpful Tip", close: "Got it", noTip: "No specific tips available for this quest." },
     empty: { title: "No quests found", subtitle: "Try adjusting your filters or search query." },
-    recommendation: { recommended: "Recommended :)", not_recommended: "Not Recommended :(", neutral: "Standard" },
+    recommendation: { recommended: "✨ Recommended", not_recommended: "⚠️ Not Recommended", neutral: "Standard" },
+    tips: { gatherQuest: "Before you send out your troops to gather:\nUse a resource gather speedup item\nSwitch to your economy page" },
     types: { arena: "Arena", market: "Black Market", alliance: "Alliance", ap: "Consume AP", diamond: "Diamond", stamina: "Stamina", gather: "Gathering", gear: "Gear", hero: "Hero Shards", heal: "Healing", help: "Help Allies", building: "Building Power", research: "Research Power", troop: "Troop Power", rally: "Monster Dens", speedup: "Speedups", transport: "Transport", packs: "Buy Packs", other: "Other" },
     questNames: {
       "Arena Challenge": "Arena Challenge",
@@ -99,7 +103,8 @@ export const translations: Record<Language, Translations> = {
     card: { requirement: "Requisito", points: "Punti", time: "Tempo", noTime: "Nessun limite" },
     modal: { reward: "Ricompensa", timeLimit: "Limite di Tempo", tip: "Consiglio Utile", close: "Capito", noTip: "Nessun consiglio specifico disponibile." },
     empty: { title: "Nessuna missione trovata", subtitle: "Prova a modificare i filtri o la ricerca." },
-    recommendation: { recommended: "Consigliata :)", not_recommended: "Non Consigliata :(", neutral: "Standard" },
+    recommendation: { recommended: "✨ Consigliata", not_recommended: "⚠️ Non Consigliata", neutral: "Standard" },
+    tips: { gatherQuest: "Prima di inviare le tue truppe a raccogliere:\nUsa un oggetto di velocità di raccolta risorse\nCambia sulla pagina economia" },
     types: { arena: "Arena", market: "Mercato Nero", alliance: "Alleanza", ap: "Consuma PA", diamond: "Diamante", stamina: "Energia", gather: "Raccolta", gear: "Equipaggiamento", hero: "Frammenti Eroe", heal: "Cura", help: "Aiuto Alleati", building: "Potere Edifici", research: "Potere Ricerca", troop: "Potere Truppe", rally: "Covi di Mostri", speedup: "Accelerazioni", transport: "Trasporto", packs: "Pacchetti", other: "Altro" },
     questNames: {
       "Arena Challenge": "Sfida in Arena",
@@ -136,7 +141,8 @@ export const translations: Record<Language, Translations> = {
     card: { requirement: "Requisito", points: "Pontos", time: "Tempo", noTime: "Sem limite" },
     modal: { reward: "Recompensa", timeLimit: "Limite de Tempo", tip: "Dica Útil", close: "Entendido", noTip: "Nenhuma dica específica disponível." },
     empty: { title: "Nenhuma missão encontrada", subtitle: "Tente ajustar seus filtros ou pesquisa." },
-    recommendation: { recommended: "Recomendada :)", not_recommended: "Não Recomendada :(", neutral: "Padrão" },
+    recommendation: { recommended: "✨ Recomendada", not_recommended: "⚠️ Não Recomendada", neutral: "Padrão" },
+    tips: { gatherQuest: "Antes de enviar suas tropas para coletar:\nUse um item de velocidade de coleta de recursos\nMude para a página de economia" },
     types: { arena: "Arena", market: "Mercado Negro", alliance: "Aliança", ap: "Consumir PA", diamond: "Diamante", stamina: "Estamina", gather: "Coleta", gear: "Equipamento", hero: "Fragmentos de Herói", heal: "Cura", help: "Ajuda de Aliados", building: "Poder de Construção", research: "Poder de Pesquisa", troop: "Poder de Tropas", rally: "Covis de Monstros", speedup: "Acelerações", transport: "Transporte", packs: "Pacotes", other: "Outro" },
     questNames: {
       "Arena Challenge": "Desafio de Arena",
@@ -173,7 +179,8 @@ export const translations: Record<Language, Translations> = {
     card: { requirement: "Anforderung", points: "Punkte", time: "Zeit", noTime: "Kein Zeitlimit" },
     modal: { reward: "Belohnung", timeLimit: "Zeitlimit", tip: "Hilfreicher Tipp", close: "Verstanden", noTip: "Keine spezifischen Tipps verfügbar." },
     empty: { title: "Keine Quests gefunden", subtitle: "Versuchen Sie, Ihre Filter oder Suche anzupassen." },
-    recommendation: { recommended: "Empfohlen :)", not_recommended: "Nicht Empfohlen :(", neutral: "Standard" },
+    recommendation: { recommended: "✨ Empfohlen", not_recommended: "⚠️ Nicht Empfohlen", neutral: "Standard" },
+    tips: { gatherQuest: "Bevor Sie Ihre Truppen zum Sammeln schicken:\nVerwenden Sie einen Ressourcen-Sammelverschnellerer\nWechseln Sie zur Wirtschaftsseite" },
     types: { arena: "Arena", market: "Schwarzmarkt", alliance: "Allianz", ap: "AP verbrauchen", diamond: "Diamant", stamina: "Ausdauer", gather: "Sammeln", gear: "Ausrüstung", hero: "Heldenscherben", heal: "Heilung", help: "Allianz-Hilfe", building: "Gebäudekraft", research: "Forschungskraft", troop: "Truppenkraft", rally: "Monsterhöhlen", speedup: "Beschleuniger", transport: "Transport", packs: "Pakete", other: "Andere" },
     questNames: {
       "Arena Challenge": "Arena-Herausforderung",
@@ -210,7 +217,8 @@ export const translations: Record<Language, Translations> = {
     card: { requirement: "Требование", points: "Очки", time: "Время", noTime: "Без лимита" },
     modal: { reward: "Награда", timeLimit: "Лимит времени", tip: "Полезный совет", close: "Понятно", noTip: "Специфических советов нет." },
     empty: { title: "Квесты не найдены", subtitle: "Попробуйте изменить фильтры." },
-    recommendation: { recommended: "Рекомендуется :)", not_recommended: "Не рекомендуется :(", neutral: "Стандартно" },
+    recommendation: { recommended: "✨ Рекомендуется", not_recommended: "⚠️ Не рекомендуется", neutral: "Стандартно" },
+    tips: { gatherQuest: "Перед отправкой войск на сбор:\nИспользуйте предмет ускорения сбора ресурсов\nПерейдите на страницу экономики" },
     types: { arena: "Арена", market: "Рынок", alliance: "Альянс", ap: "Очки действия", diamond: "Алмазы", stamina: "Энергия", gather: "Сбор", gear: "Снаряжение", hero: "Герои", heal: "Лечение", help: "Помощь", building: "Стройка", research: "Наука", troop: "Войска", rally: "Логова", speedup: "Ускорители", transport: "Транспорт", packs: "Наборы", other: "Другое" },
     questNames: {
       "Arena Challenge": "Вызов на арене",
@@ -247,7 +255,8 @@ export const translations: Record<Language, Translations> = {
     card: { requirement: "Вимога", points: "Очки", time: "Час", noTime: "Без ліміту" },
     modal: { reward: "Нагорода", timeLimit: "Ліміт часу", tip: "Корисна порада", close: "Зрозуміло", noTip: "Специфічних порад немає." },
     empty: { title: "Квести не знайдено", subtitle: "Спробуйте змінити фільтри." },
-    recommendation: { recommended: "Рекомендовано :)", not_recommended: "Не рекомендовано :(", neutral: "Стандартно" },
+    recommendation: { recommended: "✨ Рекомендовано", not_recommended: "⚠️ Не рекомендовано", neutral: "Стандартно" },
+    tips: { gatherQuest: "Перед відправленням військ на збір:\nВикористовуйте предмет прискорення збору ресурсів\nПерейдіть на сторінку економіки" },
     types: { arena: "Арена", market: "Ринок", alliance: "Альянс", ap: "Очки дії", diamond: "Алмази", stamina: "Енергія", gather: "Збір", gear: "Спорядження", hero: "Герої", heal: "Лікування", help: "Допомога", building: "Будівництво", research: "Наука", troop: "Війська", rally: "Лігва", speedup: "Прискорювачі", transport: "Транспорт", packs: "Набори", other: "Інше" },
     questNames: {
       "Arena Challenge": "Виклик на арені",
@@ -284,7 +293,8 @@ export const translations: Record<Language, Translations> = {
     card: { requirement: "Exigence", points: "Points", time: "Temps", noTime: "Pas de limite" },
     modal: { reward: "Récompense", timeLimit: "Limite de Temps", tip: "Conseil Utile", close: "Compris", noTip: "Aucun conseil spécifique disponible." },
     empty: { title: "Aucune quête trouvée", subtitle: "Essayez d'ajuster vos filtres ou votre recherche." },
-    recommendation: { recommended: "Recommandée :)", not_recommended: "Non Recommandée :(", neutral: "Standard" },
+    recommendation: { recommended: "✨ Recommandée", not_recommended: "⚠️ Non Recommandée", neutral: "Standard" },
+    tips: { gatherQuest: "Avant d'envoyer vos troupes à la récolte:\nUtilisez un accélérateur de récolte de ressources\nPassez à la page économie" },
     types: { arena: "Arène", market: "Marché Noir", alliance: "Alliance", ap: "Consommer PA", diamond: "Diamant", stamina: "Stamina", gather: "Récolte", gear: "Équipement", hero: "Fragments de Héros", heal: "Soin", help: "Aide Alliés", building: "Puissance de Bâtiment", research: "Puissance de Recherche", troop: "Puissance de Troupes", rally: "Repaires de Monstres", speedup: "Accélérateurs", transport: "Transport", packs: "Packs", other: "Autre" },
     questNames: {
       "Arena Challenge": "Défi d'Arène",
