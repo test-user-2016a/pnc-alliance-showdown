@@ -22,12 +22,8 @@ export default function Index() {
   // Info slides - user can add images and text here
   const infoSlides = [
     {
-      image: "https://via.placeholder.com/600x400?text=Slide+1",
-      text: "Add your text here"
-    },
-    {
-      image: "https://via.placeholder.com/600x400?text=Slide+2",
-      text: "Add your text here"
+      image: "https://cdn.builder.io/api/v1/image/assets%2F78a4578f1a9f4db28a3a47d12e310816%2Fdc3205fee48248a0a293c16f7d89f7a0?format=webp&width=800&height=1200",
+      text: "This is how the quests board looks for everyone (minus signs aren't visible). New quests appear every 30 minutes when refreshed, but bad quests get refreshed almost instantly, so please be patient."
     },
   ];
 
