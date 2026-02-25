@@ -1,4 +1,4 @@
-export type Language = "en" | "it" | "pt" | "de" | "ru" | "uk";
+export type Language = "en" | "it" | "pt" | "de" | "ru" | "uk" | "fr";
 
 export interface Translations {
   header: {
@@ -123,7 +123,7 @@ export const translations: Record<Language, Translations> = {
   },
   pt: {
     header: { title: "Confronto de Alianças", subtitle: "Puzzles & Chaos", dashboard: "Painel" },
-    welcome: { badge: "Motor de Otimização de Missões v1.0", title: "Painel de Dados de Missões", subtitle: "Visualize, ordene e filtre todas as missões do confronto de alianças com facilidade." },
+    welcome: { badge: "Motor de Otimização de Missões v1.0", title: "Painel de Dados de Missões", subtitle: "Visualize, ordene e filtre todas as missões do confronto de alianças com facilitade." },
     filters: { search: "Pesquisar missões...", all: "Todos os Tipos", personal: "Pessoais (240)", sort: "Ordenar por", quest: "Nome da Missão", type: "Tipo de Missão", points: "Pontos", time: "Tempo" },
     stats: { showing: "Mostrando {count} Missões", sorting: "Ordenando por {sortBy} ({order})", asc: "asc", desc: "desc" },
     card: { requirement: "Requisito", points: "Pontos", time: "Tempo", noTime: "Sem limite" },
@@ -263,6 +263,42 @@ export const translations: Record<Language, Translations> = {
       "Transport Resources to Allies": "Транспорт ресурсів союзникам",
       "Buy Packs": "Купівля наборів",
       "Gain Diamonds via Packs": "Отримання алмазів з наборів"
+    }
+  },
+  fr: {
+    header: { title: "Confrontation d'Alliances", subtitle: "Puzzles & Chaos", dashboard: "Tableau de bord" },
+    welcome: { badge: "Moteur d'Optimisation de Quêtes v1.0", title: "Tableau de Bord des Quêtes", subtitle: "Visualisez, triez et filtrez facilement chaque quête de confrontation d'alliances." },
+    filters: { search: "Rechercher des quêtes...", all: "Tous les Types", personal: "Personnelles (240)", sort: "Trier par", quest: "Nom de la Quête", type: "Type de Quête", points: "Points", time: "Temps" },
+    stats: { showing: "Affichage de {count} Quêtes", sorting: "Tri par {sortBy} ({order})", asc: "croiss", desc: "décroiss" },
+    card: { requirement: "Exigence", points: "Points", time: "Temps", noTime: "Pas de limite" },
+    modal: { reward: "Récompense", timeLimit: "Limite de Temps", tip: "Conseil Utile", close: "Compris", noTip: "Aucun conseil spécifique disponible." },
+    empty: { title: "Aucune quête trouvée", subtitle: "Essayez d'ajuster vos filtres ou votre recherche." },
+    types: { arena: "Arène", market: "Marché Noir", alliance: "Alliance", ap: "Consommer PA", diamond: "Diamant", stamina: "Stamina", gather: "Récolte", gear: "Équipement", hero: "Fragments de Héros", heal: "Soin", help: "Aide Alliés", building: "Puissance de Bâtiment", research: "Puissance de Recherche", troop: "Puissance de Troupes", rally: "Repaires de Monstres", speedup: "Accélérateurs", transport: "Transport", packs: "Packs", other: "Autre" },
+    questNames: {
+      "Arena Challenge": "Défi d'Arène",
+      "Black Market": "Marché Noir",
+      "Consume Alliance Coins": "Consommer des Pièces d'Alliance",
+      "Consume AP": "Consommer des PA",
+      "Consume Diamond": "Consommer des Diamants",
+      "Consume Stamina": "Consommer de la Stamina",
+      "Gather Food": "Récolter de la Nourriture",
+      "Gather Iron": "Récolter du Fer",
+      "Gather Stone": "Récolter de la Pierre",
+      "Gather Wood": "Récolter du Bois",
+      "Get Gear Materials": "Obtenir des Matériaux d'Équip.",
+      "Get Hero Shard": "Obtenir des Fragments de Héros",
+      "Heal Units": "Soigner des Unités",
+      "Help Allies": "Aider les Alliés",
+      "Improve Building Power": "Améliorer la Puissance de Bât.",
+      "Improve Research Power": "Améliorer la Puissance de Rech.",
+      "Improve Troop Power": "Améliorer la Puissance de Troupes",
+      "Rally on Monster Dens": "Rallye sur les Repaires",
+      "Research": "Recherche",
+      "Speedups (Build/Tech/Training/Healing)": "Accélérateurs (Bât./Tech/Entr./Soin)",
+      "Speedup (Build/Tech/Training/Healing)": "Accélérateur (Bât./Tech/Entr./Soin)",
+      "Transport Resources to Allies": "Transporter des Ressources",
+      "Buy Packs": "Acheter des Packs",
+      "Gain Diamonds via Packs": "Gagner des Diamants via Packs"
     }
   }
 };

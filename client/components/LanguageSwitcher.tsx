@@ -17,6 +17,7 @@ const languages: { code: Language; name: string; flag: string }[] = [
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
   { code: "ru", name: "Русский", flag: "🇷🇺" },
   { code: "uk", name: "Українська", flag: "🇺🇦" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
 ];
 
 export function LanguageSwitcher() {
