@@ -96,7 +96,8 @@ export const quests: Quest[] = rawQuests.map(q => {
     (q.type === "research" && q.quest.includes("Improve Research Power")) ||
     q.type === "building" ||
     q.type === "transport" ||
-    q.type === "stamina"
+    q.type === "stamina" ||
+    q.type === "troop"
   ) {
     recommendation = "not_recommended";
   }
