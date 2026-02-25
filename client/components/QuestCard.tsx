@@ -107,7 +107,7 @@ export function QuestCard({ quest, onClick }: QuestCardProps) {
           </div>
           <div className="flex flex-col items-end gap-2">
             <span className={cn(
-              "text-xs font-black uppercase tracking-widest",
+              "text-lg font-black uppercase tracking-widest leading-tight",
               isHighValue ? "text-primary" : questColors.text
             )}>
               {quest.points} {t.card.points}
