@@ -41,11 +41,11 @@ export function InfoModal({ isOpen, onClose, slides }: InfoModalProps) {
         
         <div className="relative w-full bg-secondary/30">
           {/* Image */}
-          <div className="h-64 w-full flex items-center justify-center bg-secondary/50 overflow-hidden">
+          <div className="aspect-video w-full flex items-center justify-center bg-secondary/50 overflow-hidden">
             <img
               src={slide.image}
               alt={`Slide ${currentSlide + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
 
