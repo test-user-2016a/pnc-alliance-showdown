@@ -29,6 +29,10 @@ export default function Index() {
       image: "https://cdn.builder.io/api/v1/image/assets%2F78a4578f1a9f4db28a3a47d12e310816%2F5bda135d420f4e90b4349c226202256e?format=webp&width=800&height=1200",
       text: "These are personal quests, only available to you. If you don't like them, you get a chance to refresh them every 10 minutes."
     },
+    {
+      image: "https://cdn.builder.io/api/v1/image/assets%2F78a4578f1a9f4db28a3a47d12e310816%2F7970088904ca40ddb6da5229c60558ed?format=webp&width=800&height=1200",
+      text: "Avoid quests with a \"?\" sign. Like bad quests, they get refreshed almost instantly, so there's no need to attempt them."
+    },
   ];
 
   const filteredAndSortedQuests = useMemo(() => {
