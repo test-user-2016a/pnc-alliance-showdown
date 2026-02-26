@@ -54,7 +54,7 @@ const rawQuests: Quest[] = [
   { id: "51", quest: "Heal Units", requirement: "60,000", points: 67, time: null, type: "heal" },
   { id: "52", quest: "Heal Units", requirement: "120,000", points: 86, time: null, type: "heal" },
   { id: "53", quest: "Heal Units", requirement: "240,000", points: 124, time: null, type: "heal" },
-  { id: "54", quest: "Help Allies", requirement: 35, points: 85, time: null, type: "help" },
+  { id: "54", quest: "Help Allies", requirement: 35, points: 85, time: "2 days", type: "help" },
   { id: "55", quest: "Help Allies", requirement: 55, points: 109, time: null, type: "help" },
   { id: "56", quest: "Help Allies", requirement: 100, points: 164, time: null, type: "help" },
   { id: "57", quest: "Improve Building Power", requirement: "60,000", points: 120, time: null, type: "building" },
