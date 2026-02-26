@@ -107,6 +107,10 @@ export const translations: Record<Language, Translations> = {
       "Speedups (Build/Tech/Training/Healing)": "Speedups (Build/Tech/Training/Healing)",
       "Speedup (Build/Tech/Training/Healing)": "Speedup (Build/Tech/Training/Healing)",
       "Transport Resources to Allies": "Transport Resources to Allies",
+      "Transport Food among allies": "Transport Food among allies",
+      "Transport Iron among allies": "Transport Iron among allies",
+      "Transport Stone among allies": "Transport Stone among allies",
+      "Transport Wood among allies": "Transport Wood among allies",
       "Buy Packs": "Buy Packs",
       "Gain Diamonds via Packs": "Gain Diamonds via Packs"
     }
@@ -153,6 +157,10 @@ export const translations: Record<Language, Translations> = {
       "Speedups (Build/Tech/Training/Healing)": "Accelerazioni (Costr./Tecn./Addest./Cura)",
       "Speedup (Build/Tech/Training/Healing)": "Accelerazione (Costr./Tecn./Addest./Cura)",
       "Transport Resources to Allies": "Trasporta Risorse agli Alleati",
+      "Transport Food among allies": "Trasporta Cibo tra gli Alleati",
+      "Transport Iron among allies": "Trasporta Ferro tra gli Alleati",
+      "Transport Stone among allies": "Trasporta Pietra tra gli Alleati",
+      "Transport Wood among allies": "Trasporta Legno tra gli Alleati",
       "Buy Packs": "Acquista Pacchetti",
       "Gain Diamonds via Packs": "Ottieni Diamanti dai Pacchetti"
     }
@@ -199,6 +207,10 @@ export const translations: Record<Language, Translations> = {
       "Speedups (Build/Tech/Training/Healing)": "Acelerações (Const./Tec./Treino/Cura)",
       "Speedup (Build/Tech/Training/Healing)": "Aceleração (Const./Tec./Treino/Cura)",
       "Transport Resources to Allies": "Transportar Recursos para Aliados",
+      "Transport Food among allies": "Transportar Comida entre Aliados",
+      "Transport Iron among allies": "Transportar Ferro entre Aliados",
+      "Transport Stone among allies": "Transportar Pedra entre Aliados",
+      "Transport Wood among allies": "Transportar Madeira entre Aliados",
       "Buy Packs": "Comprar Pacotes",
       "Gain Diamonds via Packs": "Ganhar Diamantes via Pacotes"
     }
@@ -245,6 +257,10 @@ export const translations: Record<Language, Translations> = {
       "Speedups (Build/Tech/Training/Healing)": "Beschleuniger (Bau/Tech/Train./Heil.)",
       "Speedup (Build/Tech/Training/Healing)": "Beschleuniger (Bau/Tech/Train./Heil.)",
       "Transport Resources to Allies": "Ressourcentransport an Verbündete",
+      "Transport Food among allies": "Nahrung unter Verbündeten transportieren",
+      "Transport Iron among allies": "Eisen unter Verbündeten transportieren",
+      "Transport Stone among allies": "Stein unter Verbündeten transportieren",
+      "Transport Wood among allies": "Holz unter Verbündeten transportieren",
       "Buy Packs": "Pakete kaufen",
       "Gain Diamonds via Packs": "Diamanten über Pakete erhalten"
     }
@@ -291,6 +307,10 @@ export const translations: Record<Language, Translations> = {
       "Speedups (Build/Tech/Training/Healing)": "Ускорения (Стройка/Наука/Войска/Лечение)",
       "Speedup (Build/Tech/Training/Healing)": "Ускорение (Стройка/Наука/Войска/Лечение)",
       "Transport Resources to Allies": "Транспорт ресурсов союзникам",
+      "Transport Food among allies": "Транспорт еды между союзниками",
+      "Transport Iron among allies": "Транспорт железа между союзниками",
+      "Transport Stone among allies": "Транспорт камня между союзниками",
+      "Transport Wood among allies": "Транспорт дерева между союзниками",
       "Buy Packs": "Покупка наборов",
       "Gain Diamonds via Packs": "Получение алмазов из наборов"
     }
@@ -337,6 +357,10 @@ export const translations: Record<Language, Translations> = {
       "Speedups (Build/Tech/Training/Healing)": "Прискорення (Будівництво/Наука/Війська/Лікування)",
       "Speedup (Build/Tech/Training/Healing)": "Прискорення (Будівництво/Наука/Війська/Лікування)",
       "Transport Resources to Allies": "Транспорт ресурсів союзникам",
+      "Transport Food among allies": "Транспорт їжі між союзниками",
+      "Transport Iron among allies": "Транспорт заліза між союзниками",
+      "Transport Stone among allies": "Транспорт каменю між союзниками",
+      "Transport Wood among allies": "Транспорт дерева між союзниками",
       "Buy Packs": "Купівля наборів",
       "Gain Diamonds via Packs": "Отримання алмазів з наборів"
     }
@@ -383,6 +407,10 @@ export const translations: Record<Language, Translations> = {
       "Speedups (Build/Tech/Training/Healing)": "Accélérateurs (Bât./Tech/Entr./Soin)",
       "Speedup (Build/Tech/Training/Healing)": "Accélérateur (Bât./Tech/Entr./Soin)",
       "Transport Resources to Allies": "Transporter des Ressources",
+      "Transport Food among allies": "Transporter de la Nourriture entre Alliés",
+      "Transport Iron among allies": "Transporter du Fer entre Alliés",
+      "Transport Stone among allies": "Transporter de la Pierre entre Alliés",
+      "Transport Wood among allies": "Transporter du Bois entre Alliés",
       "Buy Packs": "Acheter des Packs",
       "Gain Diamonds via Packs": "Gagner des Diamants via Packs"
     }
