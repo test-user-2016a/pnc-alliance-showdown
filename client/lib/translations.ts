@@ -51,6 +51,7 @@ export interface Translations {
   };
   tips: {
     gatherQuest: string;
+    heroShard: string;
   };
   info: {
     button: string;
@@ -74,7 +75,10 @@ export const translations: Record<Language, Translations> = {
     modal: { reward: "Reward", timeLimit: "Time Limit", tip: "Helpful Tip", close: "Got it", noTip: "No specific tips available for this quest." },
     empty: { title: "No quests found", subtitle: "Try adjusting your filters or search query." },
     recommendation: { recommended: "✨ Recommended", not_recommended: "⚠️ Not Recommended", neutral: "Standard" },
-    tips: { gatherQuest: "Before you send out your troops to gather:\nUse a resource gather speedup item\nSwitch to your economy page" },
+    tips: {
+      gatherQuest: "Before you send out your troops to gather:\nUse a resource gather speedup item\nSwitch to your economy page",
+      heroShard: "Before picking the quest, calculate the points from the cards (red, purple, blue) you already have. You can also exchange shards to help reach the requirement — 10 Gina shards from Trial Turret, Fiona shards from the Sapphire Shop, Gerolin shards from the Arena Shop and Arena chests, and Odell/Tutanhet shards from monsters."
+    },
     info: {
       button: "Open information",
       slides: {
@@ -124,7 +128,10 @@ export const translations: Record<Language, Translations> = {
     modal: { reward: "Ricompensa", timeLimit: "Limite di Tempo", tip: "Consiglio Utile", close: "Capito", noTip: "Nessun consiglio specifico disponibile." },
     empty: { title: "Nessuna missione trovata", subtitle: "Prova a modificare i filtri o la ricerca." },
     recommendation: { recommended: "✨ Consigliata", not_recommended: "⚠️ Non Consigliata", neutral: "Standard" },
-    tips: { gatherQuest: "Prima di inviare le tue truppe a raccogliere:\nUsa un oggetto di velocità di raccolta risorse\nCambia sulla pagina economia" },
+    tips: {
+      gatherQuest: "Prima di inviare le tue truppe a raccogliere:\nUsa un oggetto di velocità di raccolta risorse\nCambia sulla pagina economia",
+      heroShard: "Prima di scegliere la missione, calcola i punti dalle carte (rosso, viola, blu) che hai già. Puoi anche scambiare frammenti per raggiungere il requisito — 10 frammenti di Gina dalla Trial Turret, frammenti di Fiona dal Sapphire Shop, frammenti di Gerolin dall'Arena Shop e forzieri dell'Arena, e frammenti di Odell/Tutanhet dai mostri."
+    },
     info: {
       button: "Apri informazioni",
       slides: {
@@ -174,7 +181,10 @@ export const translations: Record<Language, Translations> = {
     modal: { reward: "Recompensa", timeLimit: "Limite de Tempo", tip: "Dica Útil", close: "Entendido", noTip: "Nenhuma dica específica disponível." },
     empty: { title: "Nenhuma missão encontrada", subtitle: "Tente ajustar seus filtros ou pesquisa." },
     recommendation: { recommended: "✨ Recomendada", not_recommended: "⚠️ Não Recomendada", neutral: "Padrão" },
-    tips: { gatherQuest: "Antes de enviar suas tropas para coletar:\nUse um item de velocidade de coleta de recursos\nMude para a página de economia" },
+    tips: {
+      gatherQuest: "Antes de enviar suas tropas para coletar:\nUse um item de velocidade de coleta de recursos\nMude para a página de economia",
+      heroShard: "Antes de escolher a missão, calcule os pontos dos cartões (vermelho, roxo, azul) que você já tem. Você também pode trocar fragmentos para ajudar a atingir o requisito — 10 fragmentos de Gina da Trial Turret, fragmentos de Fiona da Sapphire Shop, fragmentos de Gerolin da Arena Shop e baús da Arena, e fragmentos de Odell/Tutanhet dos monstros."
+    },
     info: {
       button: "Abrir informações",
       slides: {
@@ -224,7 +234,10 @@ export const translations: Record<Language, Translations> = {
     modal: { reward: "Belohnung", timeLimit: "Zeitlimit", tip: "Hilfreicher Tipp", close: "Verstanden", noTip: "Keine spezifischen Tipps verfügbar." },
     empty: { title: "Keine Quests gefunden", subtitle: "Versuchen Sie, Ihre Filter oder Suche anzupassen." },
     recommendation: { recommended: "✨ Empfohlen", not_recommended: "⚠️ Nicht Empfohlen", neutral: "Standard" },
-    tips: { gatherQuest: "Bevor Sie Ihre Truppen zum Sammeln schicken:\nVerwenden Sie einen Ressourcen-Sammelverschnellerer\nWechseln Sie zur Wirtschaftsseite" },
+    tips: {
+      gatherQuest: "Bevor Sie Ihre Truppen zum Sammeln schicken:\nVerwenden Sie einen Ressourcen-Sammelverschnellerer\nWechseln Sie zur Wirtschaftsseite",
+      heroShard: "Bevor Sie die Quest auswählen, berechnen Sie die Punkte aus den Karten (rot, lila, blau), die Sie bereits haben. Sie können auch Scherben austauschen, um die Anforderung zu erfüllen — 10 Gina-Scherben vom Trial Turret, Fiona-Scherben vom Sapphire Shop, Gerolin-Scherben vom Arena Shop und Arena-Schatztruhen, und Odell/Tutanhet-Scherben von Monstern."
+    },
     info: {
       button: "Informationen öffnen",
       slides: {
@@ -274,7 +287,10 @@ export const translations: Record<Language, Translations> = {
     modal: { reward: "Награда", timeLimit: "Лимит времени", tip: "Полезный совет", close: "Понятно", noTip: "Специфических советов нет." },
     empty: { title: "Квесты не найдены", subtitle: "Попробуйте изменить фильтры." },
     recommendation: { recommended: "✨ Рекомендуется", not_recommended: "⚠️ Не рекомендуется", neutral: "Стандартно" },
-    tips: { gatherQuest: "Перед отправкой войск на сбор:\nИспользуйте предмет ускорения сбора ресурсов\nПерейдите на страницу экономики" },
+    tips: {
+      gatherQuest: "Перед отправкой войск на сбор:\nИспользуйте предмет ускорения сбора ресурсов\nПерейдите на страницу экономики",
+      heroShard: "Перед выбором квеста рассчитайте очки карт (красная, фиолетовая, синяя), которые у вас уже есть. Вы также можете обменять осколки, чтобы достичь требования — 10 осколков Гины из Trial Turret, осколки Фионы из Sapphire Shop, осколки Геролина из Arena Shop и сундуков Arena, и осколки Одделла/Тутанхета у монстров."
+    },
     info: {
       button: "Открыть информацию",
       slides: {
@@ -324,7 +340,10 @@ export const translations: Record<Language, Translations> = {
     modal: { reward: "Нагорода", timeLimit: "Ліміт часу", tip: "Корисна порада", close: "Зрозуміло", noTip: "Специфічних порад немає." },
     empty: { title: "Квести не знайдено", subtitle: "Спробуйте змінити фільтри." },
     recommendation: { recommended: "✨ Рекомендовано", not_recommended: "⚠️ Не рекомендовано", neutral: "Стандартно" },
-    tips: { gatherQuest: "Перед відправленням військ на збір:\nВикористовуйте предмет прискорення збору ресурсів\nПерейдіть на сторінку економіки" },
+    tips: {
+      gatherQuest: "Перед відправленням військ на збір:\nВикористовуйте предмет прискорення збору ресурсів\nПерейдіть на сторінку економіки",
+      heroShard: "Перед вибором квесту розрахуйте очки карт (червона, фіолетова, синя), які у вас уже є. Ви також можете обміняти осколки, щоб досягти вимоги — 10 осколків Гіни з Trial Turret, осколки Фіони з Sapphire Shop, осколки Геролина з Arena Shop та сундуків Arena, і осколки Оддела/Тутанхета від монстрів."
+    },
     info: {
       button: "Відкрити інформацію",
       slides: {
@@ -374,7 +393,10 @@ export const translations: Record<Language, Translations> = {
     modal: { reward: "Récompense", timeLimit: "Limite de Temps", tip: "Conseil Utile", close: "Compris", noTip: "Aucun conseil spécifique disponible." },
     empty: { title: "Aucune quête trouvée", subtitle: "Essayez d'ajuster vos filtres ou votre recherche." },
     recommendation: { recommended: "✨ Recommandée", not_recommended: "⚠️ Non Recommandée", neutral: "Standard" },
-    tips: { gatherQuest: "Avant d'envoyer vos troupes à la récolte:\nUtilisez un accélérateur de récolte de ressources\nPassez à la page économie" },
+    tips: {
+      gatherQuest: "Avant d'envoyer vos troupes à la récolte:\nUtilisez un accélérateur de récolte de ressources\nPassez à la page économie",
+      heroShard: "Avant de choisir la quête, calculez les points des cartes (rouge, violet, bleu) que vous possédez déjà. Vous pouvez également échanger des éclats pour atteindre l'exigence — 10 éclats de Gina du Trial Turret, éclats de Fiona de la Sapphire Shop, éclats de Gerolin de l'Arena Shop et des coffres Arena, et éclats d'Odell/Tutanhet des monstres."
+    },
     info: {
       button: "Ouvrir les informations",
       slides: {
