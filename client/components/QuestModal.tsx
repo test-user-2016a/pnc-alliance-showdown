@@ -38,7 +38,10 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
           isHighValue ? "bg-primary" : cn(questColors.bg.replace("bg-", "").replace("/10", ""), "bg-current opacity-30")
         )} style={{ backgroundColor: !isHighValue ? questColors.text.replace("text-", "") : undefined }} />
 
-        <DialogHeader className="px-6 pt-8 pb-4 text-left sm:text-left">
+        <DialogTitle className="sr-only">
+          {t.questNames[quest.quest] || quest.quest}
+        </DialogTitle>
+        <div className="px-6 pt-8 pb-4 text-left sm:text-left">
           <div className="flex items-center gap-4 mb-2">
             <div className={cn(
               "flex h-14 w-14 items-center justify-center rounded-2xl ring-1 ring-inset ring-white/10 shadow-lg",
@@ -47,18 +50,18 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
               <Icon className="h-7 w-7" />
             </div>
             <div>
-              <DialogTitle className="text-2xl font-bold tracking-tight text-foreground">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground mb-1">
                 {t.questNames[quest.quest] || quest.quest}
-              </DialogTitle>
+              </h2>
               <span className={cn(
                 "text-xs font-black uppercase tracking-widest",
                 isHighValue ? "text-primary" : questColors.text
               )}>
-                {t.types[quest.type] || quest.type} {t.filters.quest}
+                {t.types[quest.type] || quest.type}
               </span>
             </div>
           </div>
-        </DialogHeader>
+        </div>
 
         <div className="px-6 py-4 space-y-6">
           <div className="grid grid-cols-2 gap-4">
@@ -100,8 +103,8 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
               <Info className="h-4 w-4" />
               <span className="text-[10px] font-bold uppercase tracking-widest">{t.modal.tip}</span>
             </div>
-            <p className="text-sm leading-relaxed text-foreground/90 italic font-medium">
-              {quest.note || t.modal.noTip}
+            <p className="text-sm leading-relaxed text-foreground/90 italic font-medium whitespace-pre-line">
+              {quest.type === "gather" ? t.tips.gatherQuest : (quest.note || t.modal.noTip)}
             </p>
           </div>
         </div>

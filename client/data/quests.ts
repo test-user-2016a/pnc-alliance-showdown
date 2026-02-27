@@ -8,13 +8,13 @@ const rawQuests: Quest[] = [
   { id: "5", quest: "Black Market", requirement: 8, points: 122, time: null, type: "market", note: "Purchase items from the Black Market. Focus on resources or speedups you need." },
   { id: "6", quest: "Black Market", requirement: 12, points: 100, time: null, type: "market" },
   { id: "7", quest: "Black Market", requirement: 16, points: 175, time: null, type: "market" },
-  { id: "8", quest: "Black Market", requirement: 32, points: 175, time: null, type: "market" },
+  { id: "8", quest: "Black Market", requirement: 32, points: 175, time: "4 days", type: "market" },
   { id: "9", quest: "Consume Alliance Coins", requirement: "40,000", points: 83, time: null, type: "alliance" },
   { id: "10", quest: "Consume Alliance Coins", requirement: "200,000", points: 98, time: null, type: "alliance" },
   { id: "11", quest: "Consume Alliance Coins", requirement: "400,000", points: 121, time: null, type: "alliance" },
   { id: "12", quest: "Consume Alliance Coins", requirement: "800,000", points: 166, time: null, type: "alliance" },
   { id: "13", quest: "Consume AP", requirement: 450, points: 73, time: null, type: "ap", note: "Use AP to attack monsters on the map. It's best to hunt monsters that provide materials you need for progression." },
-  { id: "14", quest: "Consume AP", requirement: 900, points: 100, time: null, type: "ap", note: "Consider using AP potions if you're close to completion but running out of natural recovery." },
+  { id: "14", quest: "Consume AP", requirement: 900, points: 100, time: "3 days", type: "ap", note: "Consider using AP potions if you're close to completion but running out of natural recovery." },
   { id: "15", quest: "Consume AP", requirement: 1500, points: 134, time: null, type: "ap" },
   { id: "16", quest: "Consume Diamond", requirement: "3,000", points: 101, time: null, type: "diamond" },
   { id: "17", quest: "Consume Diamond", requirement: "12,000", points: 114, time: null, type: "diamond" },
@@ -24,7 +24,7 @@ const rawQuests: Quest[] = [
   { id: "21", quest: "Consume Stamina", requirement: 375, points: 118, time: null, type: "stamina" },
   { id: "22", quest: "Consume Stamina", requirement: 625, points: 104, time: null, type: "stamina" },
   { id: "23", quest: "Consume Stamina", requirement: 1000, points: 136, time: null, type: "stamina" },
-  { id: "24", quest: "Gather Food", requirement: "1,200,000", points: 67, time: null, type: "gather", note: "Send troops to high-level food resource tiles for faster gathering. Gathering speed boosts are highly recommended." },
+  { id: "24", quest: "Gather Food", requirement: "1,200,000", points: 67, time: null, type: "gather" },
   { id: "25", quest: "Gather Food", requirement: "2,400,000", points: 82, time: null, type: "gather" },
   { id: "26", quest: "Gather Food", requirement: "4,800,000", points: 113, time: null, type: "gather" },
   { id: "27", quest: "Gather Food", requirement: "7,200,000", points: 143, time: "3 days", type: "gather" },
@@ -53,8 +53,8 @@ const rawQuests: Quest[] = [
   { id: "50", quest: "Heal Units", requirement: "15,000", points: 53, time: null, type: "heal", note: "Heal wounded troops in the infirmary. You can battle low-level monsters to intentionally create minor casualties if needed." },
   { id: "51", quest: "Heal Units", requirement: "60,000", points: 67, time: null, type: "heal" },
   { id: "52", quest: "Heal Units", requirement: "120,000", points: 86, time: null, type: "heal" },
-  { id: "53", quest: "Heal Units", requirement: "240,000", points: 124, time: null, type: "heal" },
-  { id: "54", quest: "Help Allies", requirement: 35, points: 85, time: null, type: "help" },
+  { id: "53", quest: "Heal Units", requirement: "240,000", points: 124, time: "1 day", type: "heal" },
+  { id: "54", quest: "Help Allies", requirement: 35, points: 85, time: "2 days", type: "help" },
   { id: "55", quest: "Help Allies", requirement: 55, points: 109, time: null, type: "help" },
   { id: "56", quest: "Help Allies", requirement: 100, points: 164, time: null, type: "help" },
   { id: "57", quest: "Improve Building Power", requirement: "60,000", points: 120, time: null, type: "building" },
@@ -66,23 +66,39 @@ const rawQuests: Quest[] = [
   { id: "63", quest: "Improve Troop Power", requirement: "600,000", points: 80, time: null, type: "troop" },
   { id: "64", quest: "Improve Troop Power", requirement: "1,200,000", points: 113, time: null, type: "troop" },
   { id: "65", quest: "Improve Troop Power", requirement: "2,400,000", points: 176, time: null, type: "troop" },
-  { id: "66", quest: "Rally on Monster Dens", requirement: 1, points: 76, time: null, type: "rally" },
+  { id: "66", quest: "Rally on Monster Dens", requirement: 1, points: 76, time: "12 hours", type: "rally" },
   { id: "67", quest: "Rally on Monster Dens", requirement: 2, points: 97, time: null, type: "rally" },
   { id: "68", quest: "Rally on Monster Dens", requirement: 4, points: 140, time: null, type: "rally" },
-  { id: "69", quest: "Rally on Monster Dens", requirement: 6, points: 184, time: null, type: "rally" },
+  { id: "69", quest: "Rally on Monster Dens", requirement: 6, points: 184, time: "2 days", type: "rally" },
   { id: "70", quest: "Research", requirement: 4, points: 68, time: null, type: "research" },
   { id: "71", quest: "Research", requirement: 6, points: 94, time: null, type: "research" },
   { id: "72", quest: "Research", requirement: 8, points: 119, time: null, type: "research" },
   { id: "73", quest: "Speedups (Build/Tech/Training/Healing)", requirement: "60h", points: 78, time: null, type: "speedup" },
   { id: "74", quest: "Speedups (Build/Tech/Training/Healing)", requirement: "200h", points: 121, time: null, type: "speedup" },
   { id: "75", quest: "Speedups (Build/Tech/Training/Healing)", requirement: "320h", points: 157, time: null, type: "speedup" },
-  { id: "76", quest: "Transport Resources to Allies", requirement: "12,000,000", points: 63, time: null, type: "transport" },
-  { id: "77", quest: "Transport Resources to Allies", requirement: "24,000,000", points: 87, time: null, type: "transport" },
-  { id: "78", quest: "Transport Resources to Allies", requirement: "36,000,000", points: 110, time: null, type: "transport" },
+  { id: "76", quest: "Transport Any Resources to Allies", requirement: "12,000,000", points: 63, time: null, type: "transport" },
+  { id: "77", quest: "Transport Any Resources to Allies", requirement: "24,000,000", points: 87, time: null, type: "transport" },
+  { id: "78", quest: "Transport Any Resources to Allies", requirement: "36,000,000", points: 110, time: null, type: "transport" },
+  { id: "86", quest: "Transport Food among allies", requirement: "3,000,000", points: 61, time: null, type: "transport" },
+  { id: "87", quest: "Transport Food among allies", requirement: "6,000,000", points: 74, time: null, type: "transport" },
+  { id: "88", quest: "Transport Food among allies", requirement: "12,000,000", points: 100, time: null, type: "transport" },
+  { id: "89", quest: "Transport Food among allies", requirement: "18,000,000", points: 126, time: "12 hours", type: "transport" },
+  { id: "90", quest: "Transport Iron among allies", requirement: "150,000", points: 61, time: null, type: "transport" },
+  { id: "91", quest: "Transport Iron among allies", requirement: "300,000", points: 74, time: null, type: "transport" },
+  { id: "92", quest: "Transport Iron among allies", requirement: "600,000", points: 100, time: null, type: "transport" },
+  { id: "93", quest: "Transport Iron among allies", requirement: "900,000", points: 126, time: "12 hours", type: "transport" },
+  { id: "94", quest: "Transport Stone among allies", requirement: "600,000", points: 61, time: null, type: "transport" },
+  { id: "95", quest: "Transport Stone among allies", requirement: "1,200,000", points: 74, time: null, type: "transport" },
+  { id: "96", quest: "Transport Stone among allies", requirement: "2,400,000", points: 100, time: null, type: "transport" },
+  { id: "97", quest: "Transport Stone among allies", requirement: "3,600,000", points: 126, time: "12 hours", type: "transport" },
+  { id: "98", quest: "Transport Wood among allies", requirement: "3,000,000", points: 61, time: null, type: "transport" },
+  { id: "99", quest: "Transport Wood among allies", requirement: "6,000,000", points: 74, time: null, type: "transport" },
+  { id: "100", quest: "Transport Wood among allies", requirement: "12,000,000", points: 100, time: null, type: "transport" },
+  { id: "101", quest: "Transport Wood among allies", requirement: "18,000,000", points: 126, time: "12 hours", type: "transport" },
   { id: "79", quest: "Buy Packs", requirement: 15, points: 240, time: null, type: "packs", note: "High-value quest. This is a personal quest that requires actual purchases in the game store." },
   { id: "80", quest: "Consume Diamond", requirement: "200,000", points: 240, time: null, type: "diamond", note: "Perfect for large upgrades or during diamond spending events." },
   { id: "81", quest: "Gain Diamonds via Packs", requirement: "18,000", points: 240, time: null, type: "packs" },
-  { id: "82", quest: "Get Hero Shard", requirement: "1,000,000", points: 240, time: null, type: "hero" },
+  { id: "82", quest: "Get Hero Shard", requirement: "1,000,000", points: 240, time: "4 days", type: "hero" },
   { id: "83", quest: "Improve Research Power", requirement: "1,100,000", points: 240, time: null, type: "research" },
   { id: "84", quest: "Improve Troop Power", requirement: "3,250,000", points: 240, time: null, type: "troop", note: "One of the most efficient high-point quests. Save your troop training speedups for this specific quest." },
   { id: "85", quest: "Speedup (Build/Tech/Training/Healing)", requirement: "480h", points: 240, time: null, type: "speedup" },
@@ -96,7 +112,8 @@ export const quests: Quest[] = rawQuests.map(q => {
     (q.type === "research" && q.quest.includes("Improve Research Power")) ||
     q.type === "building" ||
     q.type === "transport" ||
-    q.type === "stamina"
+    q.type === "stamina" ||
+    q.type === "troop"
   ) {
     recommendation = "not_recommended";
   }
@@ -107,7 +124,8 @@ export const quests: Quest[] = rawQuests.map(q => {
     q.type === "help" ||
     q.type === "market" ||
     q.type === "rally" ||
-    q.type === "speedup"
+    q.type === "speedup" ||
+    (q.quest === "Research" && (q.requirement === 4 || q.requirement === 6 || q.requirement === 8))
   ) {
     recommendation = "recommended";
   }

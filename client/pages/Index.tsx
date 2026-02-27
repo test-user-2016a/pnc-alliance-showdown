@@ -4,10 +4,11 @@ import { quests as initialQuests } from "@/data/quests";
 import { QuestCard } from "@/components/QuestCard";
 import { QuestFilters } from "@/components/QuestFilters";
 import { QuestModal } from "@/components/QuestModal";
+import { InfoModal } from "@/components/InfoModal";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/hooks/use-translation";
 import { Quest, QuestType } from "@shared/api";
-import { Trophy, LayoutGrid, ListFilter, LayoutDashboard, Search } from "lucide-react";
+import { Trophy, LayoutGrid, ListFilter, LayoutDashboard, Search, Info } from "lucide-react";
 
 export default function Index() {
   const { t } = useTranslation();
@@ -16,6 +17,23 @@ export default function Index() {
   const [sortBy, setSortBy] = useState<string>("points");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
   const [selectedQuest, setSelectedQuest] = useState<Quest | null>(null);
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
+
+  // Info slides - user can add images and text here
+  const infoSlides = [
+    {
+      image: "https://cdn.builder.io/api/v1/image/assets%2F78a4578f1a9f4db28a3a47d12e310816%2Fdc3205fee48248a0a293c16f7d89f7a0?format=webp&width=800&height=1200",
+      text: t.info.slides.slide1
+    },
+    {
+      image: "https://cdn.builder.io/api/v1/image/assets%2F78a4578f1a9f4db28a3a47d12e310816%2F5bda135d420f4e90b4349c226202256e?format=webp&width=800&height=1200",
+      text: t.info.slides.slide2
+    },
+    {
+      image: "https://cdn.builder.io/api/v1/image/assets%2F78a4578f1a9f4db28a3a47d12e310816%2F7970088904ca40ddb6da5229c60558ed?format=webp&width=800&height=1200",
+      text: t.info.slides.slide3
+    },
+  ];
 
   const filteredAndSortedQuests = useMemo(() => {
     return initialQuests
@@ -74,6 +92,14 @@ export default function Index() {
           </div>
 
           <div className="flex items-center gap-4">
+            <button
+              onClick={() => setIsInfoOpen(true)}
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary ring-2 ring-white/10 hover:ring-primary/30 transition-all hover:bg-secondary/80"
+              aria-label={t.info.button}
+              title={t.info.button}
+            >
+              <Info className="h-4 w-4 text-muted-foreground hover:text-primary" />
+            </button>
             <LanguageSwitcher />
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary ring-2 ring-white/10">
               <span className="text-[10px] font-bold text-primary">JD</span>
@@ -146,6 +172,12 @@ export default function Index() {
         quest={selectedQuest}
         isOpen={!!selectedQuest}
         onClose={() => setSelectedQuest(null)}
+      />
+
+      <InfoModal
+        isOpen={isInfoOpen}
+        onClose={() => setIsInfoOpen(false)}
+        slides={infoSlides}
       />
 
       {/* Footer / Mobile Nav */}

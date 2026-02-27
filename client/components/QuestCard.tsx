@@ -1,25 +1,27 @@
 import * as React from "react";
 import { Quest } from "@shared/api";
-import { 
-  Trophy, 
-  ShoppingCart, 
-  Users, 
-  Zap, 
-  Diamond, 
-  Flame, 
-  Pickaxe, 
-  Shield, 
-  User, 
-  Heart, 
-  HandHelping, 
-  Hammer, 
-  FlaskConical, 
-  Sword, 
-  Compass, 
-  Clock, 
-  Truck, 
+import {
+  Trophy,
+  ShoppingCart,
+  Users,
+  Zap,
+  Diamond,
+  Flame,
+  Pickaxe,
+  Shield,
+  User,
+  Heart,
+  HandHelping,
+  Hammer,
+  FlaskConical,
+  Sword,
+  Compass,
+  Clock,
+  Truck,
   Package,
-  HelpCircle
+  HelpCircle,
+  ThumbsUp,
+  ThumbsDown
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "@/hooks/use-translation";
@@ -103,13 +105,27 @@ export function QuestCard({ quest, onClick }: QuestCardProps) {
           )}>
             <Icon className="h-5 w-5" />
           </div>
-          <div className="flex flex-col items-end">
+          <div className="flex flex-col items-end gap-2">
             <span className={cn(
-              "text-xs font-black uppercase tracking-widest",
+              "text-lg font-black uppercase tracking-widest leading-tight",
               isHighValue ? "text-primary" : questColors.text
             )}>
               {quest.points} {t.card.points}
             </span>
+            {quest.recommendation && quest.recommendation !== "neutral" && (
+              <div className={cn(
+                "inline-flex items-center gap-1 rounded-full px-2 py-1 text-[10px] font-bold uppercase tracking-widest ring-1 ring-inset transition-all group-hover:scale-105",
+                quest.recommendation === "recommended"
+                  ? "bg-emerald-500/20 text-emerald-400 ring-emerald-500/30 border border-emerald-500/40"
+                  : "bg-rose-500/20 text-rose-400 ring-rose-500/30 border border-rose-500/40"
+              )}>
+                <span>
+                  {quest.recommendation === "recommended"
+                    ? t.recommendation.recommended
+                    : t.recommendation.not_recommended}
+                </span>
+              </div>
+            )}
             <span className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground font-bold uppercase tracking-wider">
               <Clock className="h-3.5 w-3.5" />
               {quest.time || t.card.noTime}
