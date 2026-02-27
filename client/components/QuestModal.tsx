@@ -57,7 +57,7 @@ export function QuestModal({ quest, isOpen, onClose }: QuestModalProps) {
                 "text-xs font-black uppercase tracking-widest",
                 isHighValue ? "text-primary" : questColors.text
               )}>
-                {t.types[quest.type] || quest.type} {t.filters.quest}
+                {t.types[quest.type] || quest.type}
               </span>
             </div>
           </div>
