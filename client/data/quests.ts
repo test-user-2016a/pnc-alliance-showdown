@@ -8,7 +8,7 @@ const rawQuests: Quest[] = [
   { id: "5", quest: "Black Market", requirement: 8, points: 122, time: null, type: "market", note: "Purchase items from the Black Market. Focus on resources or speedups you need." },
   { id: "6", quest: "Black Market", requirement: 12, points: 100, time: null, type: "market" },
   { id: "7", quest: "Black Market", requirement: 16, points: 175, time: null, type: "market" },
-  { id: "8", quest: "Black Market", requirement: 32, points: 175, time: null, type: "market" },
+  { id: "8", quest: "Black Market", requirement: 32, points: 175, time: "4 days", type: "market" },
   { id: "9", quest: "Consume Alliance Coins", requirement: "40,000", points: 83, time: null, type: "alliance" },
   { id: "10", quest: "Consume Alliance Coins", requirement: "200,000", points: 98, time: null, type: "alliance" },
   { id: "11", quest: "Consume Alliance Coins", requirement: "400,000", points: 121, time: null, type: "alliance" },
